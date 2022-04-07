@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_rounded_orange"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/half_rounded_orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_position"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_first_photo_container"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="1dp"
+            android:src="@drawable/circle_red"
+            app:layout_constraintStart_toStartOf="@id/iv_photo"
+            app:layout_constraintEnd_toEndOf="@id/iv_photo"
+            app:layout_constraintTop_toTopOf="@id/iv_photo"
+            app:layout_constraintBottom_toBottomOf="@id/iv_photo" />
+
+        <ImageView
+            android:id="@+id/iv_second_photo_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/quarter_circle"
+            app:layout_constraintStart_toStartOf="@id/iv_first_photo_container"
+            app:layout_constraintTop_toTopOf="@id/iv_first_photo_container" />
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="40dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_photo"
+            android:background="@drawable/circle_orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_rounded_orange"
+            app:layout_constraintBottom_toBottomOf="@id/iv_rounded_orange"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="Sourav Soman"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/iv_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="App Developer"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/iv_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+        <TextView
+            android:id="@+id/tv_myTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="16dp"
+            android:text="My Tasks"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_schedule"
+            app:layout_constraintTop_toTopOf="@id/btn_schedule"
+            app:layout_constraintBottom_toBottomOf="@id/btn_schedule"/>
+
+        <ImageButton
+            android:id="@+id/btn_schedule"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/circle_green"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintTop_toBottomOf="@id/iv_rounded_orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="button schedule"/>
+
+        <ImageButton
+            android:id="@+id/btn_toDo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_alarm"
+            android:background="@drawable/circle_red"
+            app:layout_constraintStart_toStartOf="@id/tv_myTask"
+            app:layout_constraintTop_toTopOf="@id/tv_toDo_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_toDo_subtitle"
+            android:contentDescription="button to do" />
+
+        <TextView
+            android:id="@+id/tv_toDo_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="To Do"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btn_toDo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_myTask"/>
+
+        <TextView
+            android:id="@+id/tv_toDo_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="5 tasks now. 1 started"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btn_toDo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_toDo_title"/>
+
+        <ImageButton
+            android:id="@+id/btn_inProgress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_progress"
+            android:background="@drawable/circle_orange"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/tv_myTask"
+            app:layout_constraintTop_toTopOf="@id/tv_inProgress_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_inProgress_subtitle"
+            android:contentDescription="button in progress" />
+
+        <TextView
+            android:id="@+id/tv_inProgress_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="In Progress"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btn_toDo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_toDo_subtitle"/>
+
+        <TextView
+            android:id="@+id/tv_inProgress_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="1 tasks now. 1 started"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btn_inProgress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_inProgress_title"/>
+
+        <ImageButton
+            android:id="@+id/btn_done"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_done"
+            android:background="@drawable/circle_blue"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/tv_myTask"
+            app:layout_constraintTop_toTopOf="@id/tv_done_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_done_subtitle"
+            android:contentDescription="button done" />
+
+        <TextView
+            android:id="@+id/tv_done_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="Done"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btn_toDo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_inProgress_subtitle"/>
+
+        <TextView
+            android:id="@+id/tv_done_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="18 tasks now. 13 started"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/btn_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_done_title"/>
+
+        <TextView
+            android:id="@+id/tv_activeProjects"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="16dp"
+            android:text="Active Projects"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_schedule"
+            app:layout_constraintTop_toBottomOf="@id/btn_done"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_projects"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="30dp"
+            android:paddingBottom="20dp"
+            tools:listitem="@layout/item_projects"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_activeProjects" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
